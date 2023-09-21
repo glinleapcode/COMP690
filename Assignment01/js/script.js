@@ -166,10 +166,10 @@
 // let isRaining = confirm("Is it raining today? ")
 // const isNotForPicnic = temperature < 60 || isRaining
 // if(isNotForPicnic) {
-//     document.write(`<h2>Weather is not suitable for a picnic.</h2>`)
+//     document.write(`<h2>Weather is not suitable for a picnic today.</h2>`)
 //     console.log("Weather is not suitable for a picnic.")
 // } else {
-//     document.write(`<h2>Weather is suitable for a picnic.</h2>`)
+//     document.write(`<h2>Weather is suitable for a picnic today.</h2>`)
 //     console.log("Weather is suitable for a picnic.")
 // }
 
