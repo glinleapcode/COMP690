@@ -11,7 +11,6 @@ if(score >= 1 && score <= 100) {
     } else {
         console.log("You received an F");
     }
-    
 } else {
     console.log("Only number between 1 and 100 are accepted");
 }
