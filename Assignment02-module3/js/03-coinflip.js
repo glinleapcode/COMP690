@@ -1,4 +1,3 @@
 
-//let coinFlip = Math.round(Math.random())
-let coinFlip = Math.random()
+let coinFlip = Math.round(Math.random())
 console.log(coinFlip)
