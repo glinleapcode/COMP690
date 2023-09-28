@@ -7,7 +7,9 @@ if(firstNumber > secondNumber) {
     document.write(`The larger number is the first number: ${firstNumber}`)
 } else if(secondNumber > firstNumber) {
     document.write(`The larger number is the second number: ${secondNumber}`)
-} else {
+} else if(secondNumber === firstNumber) {
     document.write(`The two numbers are equal!`)
 
+} else {
+    document.write("Please Enter Valid Integer numbers")
 }
