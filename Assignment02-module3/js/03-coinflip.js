@@ -1,11 +1,11 @@
 
 let coinFlip = Math.round(Math.random() * 10) // generate a random number between [0, 10]
 let choice = prompt('Heads or Tails? Please enter your choice(h/t): ')
-let result
+let coinResult
 if(coinFlip < 5) { // 0 <= coinFlip < 5 -> head 
-    result = 'head'
+    coinResult = 'head'
 } else { // 5 <= coinFlip <= 10 -> tail
-    result = 'tail'
+    coinResult = 'tail'
 }
 
 if(result === 'head') { // coin flipped head
