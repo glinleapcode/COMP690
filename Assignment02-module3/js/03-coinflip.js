@@ -8,7 +8,7 @@ if(coinFlip < 5) { // 0 <= coinFlip < 5 -> head
     coinResult = 'tail'
 }
 
-if(result === 'head') { // coin flipped head
+if(coinResult === 'head') { // coin flipped head
     if(choice === 'h') {
         alert("The flip was heads and you chose heads...you win!")
     } else if(choice === 't') {
