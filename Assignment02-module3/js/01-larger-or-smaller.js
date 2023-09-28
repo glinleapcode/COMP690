@@ -1,4 +1,4 @@
-document.write(`<h3>Larger or Smaller App</h3>`)
+document.write(`<h2>Larger or Smaller App</h2>`)
 let firstNumber = parseInt(prompt('Please enter the first integer: '));
 let secondNumber = parseInt(prompt('Please enter the second integer: '));
 if(firstNumber > secondNumber) {
