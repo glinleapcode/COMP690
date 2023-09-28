@@ -1,0 +1,1 @@
+document.write(`<h2>The World Translator App</h2>`)
