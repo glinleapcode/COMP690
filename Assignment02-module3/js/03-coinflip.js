@@ -1,6 +1,5 @@
 
 let coinFlip = Math.round(Math.random() * 10)
-console.log(coinFlip)
 let choice = prompt('Heads or Tails? Please enter your choice(h/t): ')
 if(coinFlip < 5) { // 0 <= coinFlip < 5  
     result = 'head'
