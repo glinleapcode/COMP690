@@ -1,5 +1,5 @@
 document.write(`<h2>The World Translator App</h2>`)
-languageCode = prompt("Please enter the language code: ")
+languageCode = prompt("Please enter the language code (e.g., es, de, en, fr, etc.): ");
 if(languageCode === 'es') {
     console.log("Hello World translated in Spanish is: Hola Mundo")
 } else if(languageCode === 'de') {
