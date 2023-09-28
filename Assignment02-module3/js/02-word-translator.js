@@ -7,5 +7,5 @@ if(languageCode === 'es') {
 } else if(languageCode === 'fr') {
     console.log("Hello World translated in French is: Bonjour le monde")
 } else {
-    console.log("Hello World in English")
+    console.log("Hello World translated in English is: Hello World")
 }
