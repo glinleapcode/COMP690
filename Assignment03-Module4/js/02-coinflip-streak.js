@@ -6,6 +6,5 @@ do {
     } else if(coinFlip === 1) {
         console.log("Tails");
     }
-
 } while(coinFlip === 0)
 
