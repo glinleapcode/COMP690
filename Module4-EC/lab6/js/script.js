@@ -30,12 +30,7 @@ while (true) {
     } else {
         console.log("Invalid year, years must be between 1 to 30")
     }
-
-
 }
-
-
-
 
 // CALCULATE FUTURE VALUE
 futureValue = investment;
