@@ -7,10 +7,10 @@ let years;
 // COLLECT VALUES FROM THE USER
 while (true) {
     investment = parseFloat(prompt('Enter investment amount as xxxx.xx'));
-    if (!isNaN(investment)) {
+    if (!isNaN(investment) && investment > 0) {
         break
     } else {
-        console.log("Invalid investment, please re-enter")
+        console.log("Invalid investment amount, please re-enter")
     }
 }
 
