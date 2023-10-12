@@ -27,6 +27,8 @@ while (true) {
     num1 = parseInt(prompt('Enter first number:'))
     if (!isNaN(num1)) { // when num1 is valid number break the loop
         break
+    } else {
+        console.log('Invalid number, please re-enter')
     }
 }
 
@@ -38,6 +40,8 @@ while (true) {
     num2 = parseInt(prompt('Enter second number:'))
     if (!isNaN(num2)) {
         break
+    } else {
+        console.log('Invalid number, please re-enter')
     }
 }
 
@@ -48,6 +52,8 @@ while (true) {
     operation = prompt('Enter operation to perform (+,-,*,/)').trim()
     if (operation === '+' || operation === '-' || operation === '*' || operation === '/') {
         break
+    } else {
+        console.log('Invalid operation, please re-enter')
     }
 }
 
