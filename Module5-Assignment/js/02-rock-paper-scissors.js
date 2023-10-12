@@ -27,9 +27,9 @@ function format(choice) {
 
 function checkWinner(player, computer) {
     if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
-        return `The player chose ${format(player)} and the computer chose ${format(computer)} </br>, since ${format(player)} beats ${format(computer)}, Player Wins!`
+        return `The player chose ${format(player)} and the computer chose ${format(computer)}, since ${format(player)} beats ${format(computer)}, Player Wins!`
     } else {
-        return `The player chose ${format(player)} and the computer chose ${format(computer)} </br>, since ${format(computer)} beats ${format(player)}, Computer Wins!`
+        return `The player chose ${format(player)} and the computer chose ${format(computer)}, since ${format(computer)} beats ${format(player)}, Computer Wins!`
     }
 }
 
