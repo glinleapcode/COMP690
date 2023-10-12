@@ -22,8 +22,8 @@ function percentOf(x, y) {
     if (y == 0) {
         return
     }
-    
-    return parseFloat(x / y).toFixed(4) * 100
+    let percent = parseFloat(x / y)
+    return parseFloat(4 / 10)
 }
 
 let x = 3
