@@ -19,9 +19,9 @@ function playerChoice() {
     return player
 }
 
+// Capitalize the first letter of the choice, format for printing
 function format(choice) {
     return choice.charAt(0).toUpperCase() + choice.slice(1)
-
 }
 
 
@@ -56,4 +56,4 @@ function init() {
     alert("Thanks for playing the game!")
 }
 
-init()
+init() // initialize the game
