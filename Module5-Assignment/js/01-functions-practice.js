@@ -1,10 +1,9 @@
 //STEP 1
 function halfNumber(num) {
-    return num / 2
+    let result = num / 2
+    return `Half of ${num} is ${result}.`
 }
-let a = 5
-let half = halfNumber(a)
-console.log(`Half of ${a} is ${half}.`)
+
 
 //STEP 2
 
@@ -22,8 +21,8 @@ function percentOf(x, y) {
     if (y == 0) {
         return
     }
-    let percent = parseFloat(x / y)
-    return parseFloat(4 / 10)
+    let percent = (x / y) * 100
+    return 
 }
 
 let x = 3
