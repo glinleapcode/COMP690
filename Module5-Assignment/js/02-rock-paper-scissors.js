@@ -9,6 +9,16 @@ function computerChoice() {
     return choices[index]
 }
 
+function playerChoice() {
+    let player
+    while (true) {
+        player = prompt("Please enter Rock, Paper or Scissor").toLowerCase()
+        if (player === 'rock' || player === 'paper' || player === 'scissor')
+            break
+    }
+    return player
+}
+
 function checkWinner(player, computer) {
     if (player === computer) {
         return "tie"
@@ -24,17 +34,9 @@ function checkWinner(player, computer) {
 }
 
 function playRockPaperScissor() {
-    let player
-    while (true) {
-        player = prompt("Please enter Rock, Paper or Scissor").toLowerCase()
-        if (player === 'rock' || player === 'paper' || player === 'scissor')
-            break
-    }
+    
     computer = computerChoice()
-    
-    
-    
-
+    alert(checkWinner(player, computer))
 }
 
 
