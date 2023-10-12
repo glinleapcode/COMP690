@@ -17,16 +17,15 @@ function squareNumber(num) {
 
 function percentOf(x, y) {
     if (y == 0) {
-        return
+        return "Cannot divide by zero"
     }
-    let percent = (x / y) * 100
-    return 
+    
+    let result = (x / y) * 100
+    return `${x} is ${result}% of ${y}`
 }
 
-let x = 3
-let y = 10
-let percent = percentOf(x, y)
-console.log(`${x} is ${percent}% of ${y}`)
+console.log(percentOf(2, 4))
+
 
 //STEP 4
 
