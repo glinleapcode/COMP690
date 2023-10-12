@@ -33,10 +33,10 @@ function checkWinner(player, computer) {
 
 }
 
-function playRockPaperScissor() {
+function playRockPaperScissorGame() {
     
     computer = computerChoice()
-    alert(checkWinner(player, computer))
+    player = playerChoice()
 }
 
 
@@ -44,7 +44,7 @@ function init() {
     welcome()
     let playAgain = 'y'
     do {
-        playRockPaperScissor()
+        playRockPaperScissorGame()
         playAgain = prompt("Do you want to play again? (y/n)")
     } while (playAgain === 'y')
     alert("Thanks for playing the game!")
