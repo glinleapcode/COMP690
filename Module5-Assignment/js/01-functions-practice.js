@@ -1,12 +1,11 @@
 //STEP 1
 function halfNumber(num) {
-    res = num / 2
-    return res
+    let half = num / 2
+    return half
 }
-
 let num = 5
-let res = halfNumber(5)
-console.log(`Half of ${num} is ${res} `)
+let half = halfNumber(num)
+console.log(`Half of ${num} is ${half}.`)
 
 
 //STEP 2
