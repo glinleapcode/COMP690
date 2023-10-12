@@ -3,6 +3,7 @@ function welcome() {
     "Welcome to Rock Paper Scissor Game!"
 }
 
+// generate a random number between 0 and 2 and use array index to get the computer choice
 function computerChoice() {
     const choices = ['rock', 'paper', 'scissor']
     index = Math.floor(Math.random() * 3)
@@ -11,7 +12,7 @@ function computerChoice() {
 
 function playerChoice() {
     let player
-    // Prompt the user for input until they enter a valid choice (rock, paper, or scissor)
+    // ask the user for input until they enter a valid choice (rock, paper, or scissor)
     while (true) {
         player = prompt("Please enter Rock, Paper or Scissor").toLowerCase()
         if (player === 'rock' || player === 'paper' || player === 'scissor')
@@ -20,12 +21,12 @@ function playerChoice() {
     return player
 }
 
-// Capitalize the first letter of the choice, format for printing
+// capitalize the first letter of the choice, format for printing
 function format(choice) {
     return choice.charAt(0).toUpperCase() + choice.slice(1)
 }
 
-// Check the winner of the game
+// check the winner of the game
 function checkWinner(player, computer) {
     if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
         return `The player chose ${format(player)} and the computer chose ${format(computer)}, since ${format(player)} beats ${format(computer)}, Player Wins!`
