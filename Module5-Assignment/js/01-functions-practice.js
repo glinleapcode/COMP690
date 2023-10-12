@@ -25,4 +25,12 @@ function percentOf(x, y) {
 
 //STEP 4
 
+function findModulus(x, y) {
+
+}
+
+
+
+
+
 //STEP 5
