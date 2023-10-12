@@ -26,8 +26,15 @@ function percentOf(x, y) {
 //STEP 4
 
 function findModulus(x, y) {
+    if (y == 0) {
+        return "Cannot divide by zero"
+    }
+    let result = x % y
+    return `${result} is the modulus of ${x} and ${y}`
 
 }
+
+console.log(findModulus(10, 4))
 
 
 
