@@ -28,7 +28,7 @@ while (true) {
     if (!isNaN(num1)) { // when num1 is valid number break the loop
         break
     } else {
-        console.log('Invalid number, please re-enter')
+        alert('Invalid number, please re-enter')
     }
 }
 
@@ -41,7 +41,7 @@ while (true) {
     if (!isNaN(num2)) {
         break
     } else {
-        console.log('Invalid number, please re-enter')
+        alert('Invalid number, please re-enter')
     }
 }
 
@@ -53,7 +53,7 @@ while (true) {
     if (operation === '+' || operation === '-' || operation === '*' || operation === '/') {
         break
     } else {
-        console.log('Invalid operation, please re-enter')
+        alert('Invalid operation, please re-enter')
     }
 }
 
