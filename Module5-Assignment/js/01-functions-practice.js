@@ -1,4 +1,8 @@
 //STEP 1
+function halfNumber(num){
+    
+}
+
 
 //STEP 2
 
