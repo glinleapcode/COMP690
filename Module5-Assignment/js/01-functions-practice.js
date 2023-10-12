@@ -20,7 +20,7 @@ function percentOf(x, y) {
         return "Cannot divide by zero"
     }
     
-    let result = (x / y) * 100
+    let result = ((x / y) * 100).toFixed(2)
     return `${x} is ${result}% of ${y}`
 }
 
