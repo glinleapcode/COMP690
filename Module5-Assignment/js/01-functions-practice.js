@@ -22,7 +22,8 @@ function percentOf(x, y) {
     if (y == 0) {
         return
     }
-    return ((x / y) * 100).toFixed(1)
+    console.log(x / y)
+    return x / y
 }
 
 let x = 3
