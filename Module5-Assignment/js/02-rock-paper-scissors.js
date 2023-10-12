@@ -24,9 +24,9 @@ function checkWinner(player, computer) {
         return "tie"
     } else {
         if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
-            return "Player wins"
+            return `player plays ${player} and computer plays ${computer}, ${player} beats ${computer}, Player Wins`
         } else {
-            return "Computer Wins"
+            return `player plays ${player} and computer plays ${computer}, ${computer} beats ${player}, Computer Wins`
         }
     }
 
