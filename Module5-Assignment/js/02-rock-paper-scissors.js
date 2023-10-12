@@ -20,17 +20,11 @@ function playerChoice() {
 }
 
 function checkWinner(player, computer) {
-    if (player === computer) {
-        return "tie"
+    if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
+        return `player plays ${player} and computer plays ${computer}, ${player} beats ${computer}, Player Wins`
     } else {
-        if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
-            return `player plays ${player} and computer plays ${computer}, ${player} beats ${computer}, Player Wins`
-        } else {
-            return `player plays ${player} and computer plays ${computer}, ${computer} beats ${player}, Computer Wins`
-        }
+        return `player plays ${player} and computer plays ${computer}, ${computer} beats ${player}, Computer Wins`
     }
-
-
 }
 
 function playRockPaperScissorGame() {
