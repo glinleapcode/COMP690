@@ -11,6 +11,7 @@ function computerChoice() {
 
 function playerChoice() {
     let player
+    // Prompt the user for input until they enter a valid choice (rock, paper, or scissor)
     while (true) {
         player = prompt("Please enter Rock, Paper or Scissor").toLowerCase()
         if (player === 'rock' || player === 'paper' || player === 'scissor')
@@ -24,7 +25,7 @@ function format(choice) {
     return choice.charAt(0).toUpperCase() + choice.slice(1)
 }
 
-
+// Check the winner of the game
 function checkWinner(player, computer) {
     if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
         return `The player chose ${format(player)} and the computer chose ${format(computer)}, since ${format(player)} beats ${format(computer)}, Player Wins!`
@@ -33,6 +34,7 @@ function checkWinner(player, computer) {
     }
 }
 
+// main game function
 function playRockPaperScissorGame() {
     let computer = computerChoice()
     let player = playerChoice()
@@ -46,6 +48,7 @@ function playRockPaperScissorGame() {
     alert(result)
 }
 
+// start the game
 function init() {
     welcome()
     let playAgain = 'y'
@@ -56,4 +59,4 @@ function init() {
     alert("Thanks for playing the game!")
 }
 
-init() // initialize the game
+init() // starting point of the game
