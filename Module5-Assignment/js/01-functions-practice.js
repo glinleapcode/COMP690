@@ -17,7 +17,7 @@ function squareNumber(num) {
 
 function percentOf(x, y) {
     if (y == 0) {
-        return "Cannot divide by zero"
+        return "Cannot divide by zero!"
     }
     let result = ((x / y) * 100).toFixed(2)
     return `${x} is ${result}% of ${y}`
@@ -27,7 +27,7 @@ function percentOf(x, y) {
 
 function findModulus(x, y) {
     if (y == 0) {
-        return "Cannot divide by zero"
+        return "Cannot divide by zero!"
     }
     let result = x % y
     return `${result} is the modulus of ${x} and ${y}`
