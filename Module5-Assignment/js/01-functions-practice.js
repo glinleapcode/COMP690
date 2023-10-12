@@ -36,8 +36,4 @@ function findModulus(x, y) {
 
 console.log(findModulus(10, 4))
 
-
-
-
-
 //STEP 5
