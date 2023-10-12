@@ -38,8 +38,6 @@ function playRockPaperScissorGame() {
     }
     let result = checkWinner(player, computer)
     console.log(result)
-    
-    
 }
 
 function init() {
@@ -50,7 +48,6 @@ function init() {
         playAgain = prompt("Do you want to play again? (y/n)")
     } while (playAgain === 'y')
     console.log("Thanks for playing the game!")
-
 }
 
 init()
