@@ -16,10 +16,19 @@ let b = 3
 let square = squareNumber(b)
 console.log(`The result of squaring the number ${b} is ${square}.`)
 
-
-
-
 //STEP 3
+
+function percentOf(x, y) {
+    if (y == 0) {
+        return
+    }
+    return (x / y) * 100
+}
+
+let x = 3
+let y = 10
+let percent = percentOf(x, y)
+console.log(`${x} is ${percent}% of ${y}`)
 
 //STEP 4
 
