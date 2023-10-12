@@ -34,9 +34,18 @@ function checkWinner(player, computer) {
 }
 
 function playRockPaperScissorGame() {
+    let computer = computerChoice()
+    let player = playerChoice()
     
-    computer = computerChoice()
-    player = playerChoice()
+    while (computer === player) {
+        alert("Tie, Please continue to play")
+        computer = computerChoice()
+        player = playerChoice()
+    }
+    let result = checkWinner(player, computer)
+    alert(result)
+    
+    
 }
 
 
