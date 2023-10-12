@@ -24,7 +24,7 @@ function percentOf(x, y) {
     return `${x} is ${result}% of ${y}`
 }
 
-console.log(percentOf(2, 4))
+console.log(percentOf(3, 11))
 
 
 //STEP 4
