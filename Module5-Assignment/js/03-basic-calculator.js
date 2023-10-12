@@ -12,12 +12,13 @@ function calculate(x, y, operation) {
             result = x * y
             break
         case '/':
-            result = x / y
+            result = (x / y).toFixed(2)
             console.log(result)
             break
         default:
             result = 'Invalid operation or operation not supported'
     }
+    return result
 }
 
 // COLLECT FIRST NUMBER FROM USER
