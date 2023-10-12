@@ -13,7 +13,6 @@ function calculate(x, y, operation) {
             break
         case '/':
             result = (x / y).toFixed(2)
-            console.log(result)
             break
         default:
             result = 'Invalid operation or operation not supported'
@@ -51,4 +50,4 @@ while (true) {
 
 // CALL THE FUNCTION AND RETURN THE RESULT WITHIN AN ALERT
 let result = calculate(num1, num2, operation)
-alert(result)
+alert(`${num1} ${operation} ${num2} = ${result}`)
