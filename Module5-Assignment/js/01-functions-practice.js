@@ -1,14 +1,23 @@
 //STEP 1
 function halfNumber(num) {
-    let half = num / 2
-    return half
+    return num / 2
 }
-let num = 5
-let half = halfNumber(num)
-console.log(`Half of ${num} is ${half}.`)
-
+let a = 5
+let half = halfNumber(a)
+console.log(`Half of ${a} is ${half}.`)
 
 //STEP 2
+
+function squareNumber(num) {
+    return num * num
+} 
+
+let b = 3
+let square = squareNumber(b)
+console.log(`The result of squaring the number ${b} is ${square}.`)
+
+
+
 
 //STEP 3
 
