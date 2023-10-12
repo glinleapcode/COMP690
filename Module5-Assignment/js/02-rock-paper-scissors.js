@@ -21,9 +21,9 @@ function playerChoice() {
 
 function checkWinner(player, computer) {
     if (player === 'scissor' && computer === 'paper' || player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock') {
-        return `player plays ${player} and computer plays ${computer}, ${player} beats ${computer}, Player Wins`
+        return `The player chose ${player} and the computer chose ${computer}, since ${player} beats ${computer}, Player Wins!`
     } else {
-        return `player plays ${player} and computer plays ${computer}, ${computer} beats ${player}, Computer Wins`
+        return `The player chose ${player} and the computer chose ${computer}, since ${computer} beats ${player}, Computer Wins!`
     }
 }
 
