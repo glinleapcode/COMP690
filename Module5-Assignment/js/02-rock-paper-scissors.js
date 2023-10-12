@@ -32,7 +32,7 @@ function playRockPaperScissorGame() {
     let player = playerChoice()
     
     while (computer === player) {
-        console.log("Tie, Please continue to play")
+        console.log(`Both the player and the computer have selected ${player}, resulting in a tie. Please make another choice`)
         computer = computerChoice()
         player = playerChoice()
     }
