@@ -8,12 +8,10 @@ function halfNumber(num) {
 //STEP 2
 
 function squareNumber(num) {
-    return num * num
+    let result = num * num
+    return `The result of squaring the number ${num} is ${result}.`
 } 
 
-let b = 3
-let square = squareNumber(b)
-console.log(`The result of squaring the number ${b} is ${square}.`)
 
 //STEP 3
 
