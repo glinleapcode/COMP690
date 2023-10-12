@@ -32,16 +32,15 @@ function playRockPaperScissorGame() {
     let player = playerChoice()
     
     while (computer === player) {
-        alert("Tie, Please continue to play")
+        console.log("Tie, Please continue to play")
         computer = computerChoice()
         player = playerChoice()
     }
     let result = checkWinner(player, computer)
-    alert(result)
+    console.log(result)
     
     
 }
-
 
 function init() {
     welcome()
@@ -50,7 +49,7 @@ function init() {
         playRockPaperScissorGame()
         playAgain = prompt("Do you want to play again? (y/n)")
     } while (playAgain === 'y')
-    alert("Thanks for playing the game!")
+    console.log("Thanks for playing the game!")
 
 }
 
