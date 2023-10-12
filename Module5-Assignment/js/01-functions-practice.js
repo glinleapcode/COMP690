@@ -1,5 +1,7 @@
 //STEP 1
-function halfNumber(num){
+function halfNumber(num) {
+    res = num / 2
+    return res
     
 }
 
