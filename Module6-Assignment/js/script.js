@@ -14,14 +14,5 @@ form.addEventListener('submit', (e) => {
     console.log(`Department: ${department.value}`)
 });
 
-// this won't be able to prevent the submission of the form if required fields are empty
-// submit.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     console.log(`ID: ${id.value}`)
-//     console.log(`Name: ${name.value}`)
-//     console.log(`Ext: ${ext.value}`)
-//     console.log(`Email: ${email.value}`)
-//     console.log(`Department: ${department.value}`)
 
-// });
 
