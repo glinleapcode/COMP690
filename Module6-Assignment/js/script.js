@@ -19,7 +19,7 @@ const submit = document.getElementById('submit');
 // });
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     console.log(`ID: ${id.value}`)
     console.log(`Name: ${name.value}`)
     console.log(`Ext: ${ext.value}`)
