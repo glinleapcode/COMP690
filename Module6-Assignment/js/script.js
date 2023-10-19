@@ -1,3 +1,4 @@
+const form = document.getElementById('empForm');
 
 const id = document.getElementById('id');
 const name = document.getElementById('name');
