@@ -7,6 +7,7 @@ const email = document.getElementById('email');
 const department = document.getElementById('department');
 const submit = document.getElementById('submit');
 
+// this won't be able to prevent the submission of the form if required fields are empty
 // submit.addEventListener('click', (e) => {
 //     e.preventDefault();
 //     console.log(`ID: ${id.value}`)
@@ -24,6 +25,5 @@ form.addEventListener('submit', (e) => {
     console.log(`Ext: ${ext.value}`)
     console.log(`Email: ${email.value}`)
     console.log(`Department: ${department.value}`)
-
 });
 
