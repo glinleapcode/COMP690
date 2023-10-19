@@ -1,3 +1,4 @@
+// ensure the JS code is executed only after the page finishes loading
 window.addEventListener('load', () => {
     const form = document.getElementById('empForm');
     const id = document.getElementById('id');
