@@ -1,12 +1,10 @@
 const form = document.getElementById('empForm');
-
 const id = document.getElementById('id');
 const name = document.getElementById('name');
 const ext = document.getElementById('ext');
 const email = document.getElementById('email');
 const department = document.getElementById('department');
 const submit = document.getElementById('submit');
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(`ID: ${id.value}`)
