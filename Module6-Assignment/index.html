@@ -18,16 +18,20 @@
     <h1>Employee Management System</h1>
     <form id="empForm" style="width: 400px; border: 3px solid turquoise; background-color: lightgray;">
         <div class="form-group">
-            <label for="id">8-Digit Employee ID</label>
+            <label for="id" class="form-label">8-Digit Employee ID</label>
             <input type="text" id="id" name="id" required maxlength="8" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group" class="form-label">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group" class="form-label">
             <label for="ext">4-Digit Extension</label>
             <input type="text" id="ext" name="ext" required maxlength="4" class="form-control">
+        </div>
+        <div class="form-group" class="form-label">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="">
         </div>
      
     </form>
