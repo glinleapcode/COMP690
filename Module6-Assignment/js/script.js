@@ -1,4 +1,4 @@
-// use defer in html script tag to ensure the JS code is executed only after the page finishes loading
+// Method1: use defer in html script tag to ensure the JS code is executed only after the page finishes loading
 const form = document.getElementById('empForm');
 const id = document.getElementById('id');
 const name = document.getElementById('name');

@@ -1,4 +1,4 @@
-// ensure the JS code is executed only after the page finishes loading
+// Method2: handle window object load event to ensure the JS code is executed only after the page finishes loading
 window.addEventListener('load', () => {
     console.log('All assets are loaded');
     const form = document.getElementById('empForm');
