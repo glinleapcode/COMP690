@@ -1,5 +1,6 @@
 // ensure the JS code is executed only after the page finishes loading
 window.addEventListener('load', () => {
+    console.log('All assets are loaded');
     const form = document.getElementById('empForm');
     const id = document.getElementById('id');
     const name = document.getElementById('name');
