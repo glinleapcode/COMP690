@@ -16,11 +16,6 @@ form.addEventListener("submit", (e) => {
   const ext = document.getElementById("extension");
   const email = document.getElementById("email");
   const department = document.getElementById("department");
-  //   console.log(`ID: ${id.value}`);
-  //   console.log(`Name: ${name.value}`);
-  //   console.log(`Ext: ${ext.value}`);
-  //   console.log(`Email: ${email.value}`);
-  //   console.log(`Department: ${department.value}`);
 
   // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
   let row = selectedTable.insertRow();
@@ -48,7 +43,7 @@ form.addEventListener("submit", (e) => {
   form.reset();
   // SET FOCUS BACK TO THE ID TEXT BOX
   id.focus();
-  // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
+  // INCREMENT THE NUMBER OF EMPLOYEES IN THE TABLE
   employeeCount++;
   empCount.innerText = employeeCount;
 });
@@ -60,6 +55,10 @@ selectedTable.addEventListener("click", function (e) {
     if (confirm("Are you sure you want to delete this employee?")) {
       rowToDelete.remove();
       employeeCount--;
+      if (employeeCount === 0) {
+        // hide it if there is no employee
+        empCount.style.display = "none";
+      }
       empCount.innerText = employeeCount;
     }
   }
