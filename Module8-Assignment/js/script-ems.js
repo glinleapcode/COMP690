@@ -110,6 +110,7 @@ function buildGrid() {
     // hide the empCount field
     empCount.style.display = "none";
     // remove the employees table from localStorage when no employee
+    // this ensure the initEmployees populated when rerun
     localStorage.removeItem("employees");
   } else {
     // STORE THE ARRAY IN STORAGE
