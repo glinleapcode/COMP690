@@ -27,11 +27,6 @@ if (!localStorage.getItem("employees")) {
 
 // GET DOM ELEMENTS
 
-// let form = document.querySelector("#addForm");
-// let empTable = document.querySelector("#empTable");
-// let empTableBody = document.querySelector("tbody");
-// let empCount = document.querySelector("#empCount");
-
 let form = $("addForm");
 let empTable = $("empTable");
 let empTableBody = document.querySelector("tbody");
@@ -44,12 +39,6 @@ buildGrid(employees);
 form.addEventListener("submit", (e) => {
   // PREVENT FORM SUBMISSION
   e.preventDefault();
-  // GET THE VALUES FROM THE TEXT BOXES
-  // let id = document.querySelector("#id").value;
-  // let name = document.querySelector("#name").value;
-  // let ext = document.querySelector("#extension").value;
-  // let email = document.querySelector("#email").value;
-  // let department = document.querySelector("#department").value;
 
   let id = $("id").value;
   let name = $("name").value;
@@ -76,7 +65,6 @@ empTable.addEventListener("click", (e) => {
     if (confirm("Are you sure you want to delete this employee?")) {
       // GET THE SELECTED ROWINDEX FOR THE TR (PARENTNODE.PARENTNODE)
       let rowIndex = e.target.closest("tr").rowIndex;
-      //   let rowIndex = e.target.parentNode.parentNode.rowIndex;
       console.log(rowIndex);
       // CALL DELETEROW() METHOD TO DELETE SPECIFIC ROW IN THE TABLE
       empTable.deleteRow(rowIndex);
@@ -95,7 +83,6 @@ function buildGrid() {
   empTableBody.innerHTML = "";
   // REBUILD THE TBODY FROM SCRATCH
   // BIND THE TBODY TO THE EMPLOYEE TABLE
-
   // LOOP THROUGH THE ARRAY OF EMPLOYEES
   employees.forEach((employee) => {
     // REBUILDING THE ROW STRUCTURE
@@ -109,14 +96,12 @@ function buildGrid() {
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "btn btn-danger delete ";
     deleteBtn.textContent = "X";
-    // add to td cell first
+    // add delete button to td cell
     let cellDelete = document.createElement("td");
     cellDelete.append(deleteBtn);
     // append the cellDelete to row
     row.appendChild(cellDelete);
-
-    // row.appendChild(deleteBtn);
-    // add the row to the table body for every employee
+    // add the row to the table body for each employee
     empTableBody.appendChild(row);
   });
   // UPDATE EMPLOYEE COUNT
@@ -124,6 +109,7 @@ function buildGrid() {
   if (employees.length == 0) {
     // hide the empCount field
     empCount.style.display = "none";
+    // remove the employees table from localStorage if there is no employee
     localStorage.removeItem("employees");
   } else {
     // STORE THE ARRAY IN STORAGE
