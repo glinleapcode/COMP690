@@ -107,7 +107,7 @@ function buildGrid() {
   // UPDATE EMPLOYEE COUNT
   empCount.textContent = `(${employees.length})`;
   if (employees.length == 0) {
-    // hide the empCount field
+    // hide the empCount field when no employee
     empCount.style.display = "none";
     // remove the employees table from localStorage when no employee
     // this ensure the initEmployees populated when we delete all the employees and reload
