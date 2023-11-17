@@ -109,13 +109,11 @@ function buildGrid() {
   if (employees.length == 0) {
     // hide the empCount field
     empCount.style.display = "none";
-    // remove the employees table from localStorage if there is no employee
+    // remove the employees table from localStorage when no employee
     localStorage.removeItem("employees");
   } else {
     // STORE THE ARRAY IN STORAGE
     // stringify the array and store it in the local storage, will overwrite the existing data
     localStorage.setItem("employees", JSON.stringify(employees));
   }
-
-  //   console.log(employees);
 }
