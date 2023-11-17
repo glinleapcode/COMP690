@@ -2,21 +2,15 @@
 
 let employees = [];
 
+$ = (id) => document.getElementById(id);
+
 let initEmployees = [
   [11111111, "Zack Zelda", "1234", "zackzella@gmail.com", "Engineering"],
   [22222222, "Jessica Jones", "2345", "jessicajones@gmail.com", "Executive"],
   [33333333, "Mark Mellow", "3456", "markmellow@gmail.com", "Marketing"],
-  [
-    44444444,
-    "Fred Friendly",
-    "4567",
-    "fredfriendly@gmail.com",
-    "Administrative",
-  ],
+  [44444444, "Fred Ferret", "4567", "fredFerret@gmail.com", "Administrative"],
   [55555555, "Sally Sony", "5678", "sallysony@gmail.com", "Sales"],
 ];
-
-// localStorage.clear();
 
 // CHECK TO SEE IF STORAGE OBJECT EXISTS WHEN THE PAGE LOADS
 
@@ -24,6 +18,7 @@ let initEmployees = [
 
 if (!localStorage.getItem("employees")) {
   console.log("No employees in local storage");
+  // populate array with initEmployees
   employees = initEmployees;
 } else {
   // if some data in the local storage, get the data and parse it into an array
@@ -32,10 +27,15 @@ if (!localStorage.getItem("employees")) {
 
 // GET DOM ELEMENTS
 
-let form = document.querySelector("#addForm");
-let empTable = document.querySelector("#empTable");
+// let form = document.querySelector("#addForm");
+// let empTable = document.querySelector("#empTable");
+// let empTableBody = document.querySelector("tbody");
+// let empCount = document.querySelector("#empCount");
+
+let form = $("addForm");
+let empTable = $("empTable");
 let empTableBody = document.querySelector("tbody");
-let empCount = document.querySelector("#empCount");
+let empCount = $("empCount");
 
 // BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
 buildGrid(employees);
@@ -45,11 +45,17 @@ form.addEventListener("submit", (e) => {
   // PREVENT FORM SUBMISSION
   e.preventDefault();
   // GET THE VALUES FROM THE TEXT BOXES
-  let id = document.querySelector("#id").value;
-  let name = document.querySelector("#name").value;
-  let ext = document.querySelector("#extension").value;
-  let email = document.querySelector("#email").value;
-  let department = document.querySelector("#department").value;
+  // let id = document.querySelector("#id").value;
+  // let name = document.querySelector("#name").value;
+  // let ext = document.querySelector("#extension").value;
+  // let email = document.querySelector("#email").value;
+  // let department = document.querySelector("#department").value;
+
+  let id = $("id").value;
+  let name = $("name").value;
+  let ext = $("extension").value;
+  let email = $("email").value;
+  let department = $("department").value;
 
   // ADD THE NEW EMPLOYEE TO A NEW ARRAY OBJECT
   let newEmployee = [id, name, ext, email, department];
@@ -60,7 +66,7 @@ form.addEventListener("submit", (e) => {
   // RESET THE FORM
   form.reset();
   // SET FOCUS BACK TO THE ID TEXT BOX
-  document.querySelector("#id").focus();
+  $("id").focus();
 });
 
 // DELETE EMPLOYEE
@@ -83,7 +89,7 @@ empTable.addEventListener("click", (e) => {
   }
 });
 
-// BUILD THE EMPLOYEES GRID
+// BUILD THE EMPLOYEES GRID, DISPLAY DATA
 function buildGrid() {
   // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
   empTableBody.innerHTML = "";
@@ -103,15 +109,27 @@ function buildGrid() {
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "btn btn-danger delete ";
     deleteBtn.textContent = "X";
-    row.appendChild(deleteBtn);
-    // add the row to the table body
+    // add to td cell first
+    let cellDelete = document.createElement("td");
+    cellDelete.append(deleteBtn);
+    // append the cellDelete to row
+    row.appendChild(cellDelete);
+
+    // row.appendChild(deleteBtn);
+    // add the row to the table body for every employee
     empTableBody.appendChild(row);
   });
   // UPDATE EMPLOYEE COUNT
   empCount.textContent = `(${employees.length})`;
+  if (employees.length == 0) {
+    // hide the empCount field
+    empCount.style.display = "none";
+    localStorage.removeItem("employees");
+  } else {
+    // STORE THE ARRAY IN STORAGE
+    // stringify the array and store it in the local storage, will overwrite the existing data
+    localStorage.setItem("employees", JSON.stringify(employees));
+  }
 
-  // STORE THE ARRAY IN STORAGE
-  // stringify the array and store it in the local storage, will overwrite the existing data
-  localStorage.setItem("employees", JSON.stringify(employees));
   //   console.log(employees);
 }
