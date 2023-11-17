@@ -63,7 +63,7 @@ empTable.addEventListener("click", (e) => {
   // CONFIRM THE DELETE
   if (e.target.classList.contains("delete")) {
     if (confirm("Are you sure you want to delete this employee?")) {
-      // GET THE SELECTED ROWINDEX FOR THE TR (PARENTNODE.PARENTNODE)
+      // GET THE SELECTED ROWINDEX FOR THE TR
       let rowIndex = e.target.closest("tr").rowIndex;
       console.log(rowIndex);
       // CALL DELETEROW() METHOD TO DELETE SPECIFIC ROW IN THE TABLE
