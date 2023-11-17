@@ -113,7 +113,7 @@ function buildGrid() {
     localStorage.removeItem("employees");
   } else {
     // STORE THE ARRAY IN STORAGE
-    // stringify the array and store in localStorage if there is employee, overwrite the existing data each time
+    // update localStorage if there is employee, overwrite the existing data each time
     localStorage.setItem("employees", JSON.stringify(employees));
   }
 }
