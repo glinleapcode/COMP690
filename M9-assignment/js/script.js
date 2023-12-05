@@ -22,7 +22,7 @@ empTable.addEventListener("click", (e) => {
       empTable.deleteRow(rowIndex);
       // UPDATE EMPLOYEE COUNT
       // empCount.value = `(${empTable.rows.length - 1})`;
-      empCount.value = parseInt(empCount.value) - 1;
+      console.log(typeof empCount.value);
     }
   }
 });
