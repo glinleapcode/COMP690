@@ -20,6 +20,8 @@ empTable.addEventListener("click", (e) => {
       let rowIndex = e.target.parentNode.parentNode.rowIndex;
       // REMOVE EMPLOYEE FROM ARRAY
       empTable.deleteRow(rowIndex);
+      // UPDATE EMPLOYEE COUNT
+      --empCount.value;
     }
   }
 });
