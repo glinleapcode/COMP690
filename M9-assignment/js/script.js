@@ -21,8 +21,7 @@ empTable.addEventListener("click", (e) => {
       // REMOVE EMPLOYEE FROM ARRAY
       empTable.deleteRow(rowIndex);
       // UPDATE EMPLOYEE COUNT
-      // empCount.value = `(${empTable.rows.length - 1})`;
-      console.log(typeof empCount.value);
+      empCount.value = `(${empTable.rows.length - 1})`;
     }
   }
 });
