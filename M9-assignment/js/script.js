@@ -35,7 +35,6 @@ function buildGrid(employees) {
   // LOOP THROUGH THE ARRAY OF EMPLOYEES
   // REBUILDING THE ROW STRUCTURE
   for (let employee of employees) {
-    console.log(employee);
     tbody.innerHTML += `
         <tr>
             <td>${employee.id}</td>
