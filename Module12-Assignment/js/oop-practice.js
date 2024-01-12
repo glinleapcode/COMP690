@@ -102,17 +102,17 @@
 
 // STEP 9
 
-String.prototype.findWords = function (target) {
-  // Split the string into an array of words by whitespace
-  const words = this.split(/\s+/);
-  let count = 0;
-  for (let word of words) {
-    if (word.toLowerCase() === target.toLowerCase()) {
-      count++;
-    }
-  }
-  alert(`The word "${target}" was found ${count} times in Text: ${this}`);
-};
+// String.prototype.findWords = function (target) {
+//   // Split the string into an array of words by whitespace
+//   const words = this.split(/\s+/);
+//   let count = 0;
+//   for (let word of words) {
+//     if (word.toLowerCase() === target.toLowerCase()) {
+//       count++;
+//     }
+//   }
+//   alert(`The word "${target}" was found ${count} times in Text: ${this}`);
+// };
 
-const text = "The quick brown fox jumps over the lazy dog";
-console.log(text.findWords("the"));
+// const text = "The quick brown fox jumps over the lazy dog";
+// console.log(text.findWords("the"));
