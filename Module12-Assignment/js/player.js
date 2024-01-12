@@ -84,7 +84,7 @@ document.querySelector("#playButton").addEventListener("click", function () {
   const albumSelectedIndex = albumDropdown.value;
   const albumSelected = jbox.albums[albumSelectedIndex];
   albumSelected.play();
-  console.log(albumSelected.display());
+  // console.log(albumSelected.display());
 });
 
 // favorite button event listener
@@ -92,7 +92,7 @@ document
   .querySelector("#favoriteButton")
   .addEventListener("click", function () {
     const favoriteAlbum = jbox.favoriteAlbum();
-    console.log(favoriteAlbum);
+    // console.log(favoriteAlbum);
     const showFavoriteAlbumElement = document.querySelector("#favoriteAlbum");
     // console.log(jbox.albums);
     showFavoriteAlbumElement.innerHTML = `Your favorite album is: ${favoriteAlbum}`;
