@@ -35,12 +35,12 @@ const createSlideshow = function () {
   // PUBLIC METHODS THAT HAVE ACCESS TO PRIVATE VARIABLES AND FUNCTIONS
   return {
     loadImages: function (slides) {
-      for (let i = 0; i < slides.length; i++) {
-        let image = new Image();
-        image.src = slides[i].href;
-        image.title = slides[i].title;
+      slides.forEach((slide) => {
+        const image = new Image();
+        image.src = slide.href;
+        image.title = slide.title;
         img.cache.push(image);
-      }
+      });
 
       return this;
     },
