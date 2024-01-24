@@ -61,7 +61,8 @@ const createSlideshow = function () {
         }
 
         setPlayText(this);
-        // TOGGLE PLAY 'FLAG'
+        console.log(this);
+
         play = !play;
       };
     },
@@ -88,8 +89,7 @@ const createSlideshow = function () {
           me.startSlideShow(nodes.image, nodes.caption);
           play = true;
           // setPlayText($("play_pause"));
-          console.log(this);
-          // setPlayText(this);
+
           $("play_pause").value = "Pause";
         } else {
           alert("Please enter a valid speed in milliseconds.");
