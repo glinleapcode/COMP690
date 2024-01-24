@@ -89,7 +89,7 @@ const createSlideshow = function () {
           play = true;
           // setPlayText($("play_pause"));
           console.log(this);
-          setPlayText(this);
+          // setPlayText(this);
           $("play_pause").value = "Pause";
         } else {
           alert("Please enter a valid speed in milliseconds.");
