@@ -52,8 +52,6 @@ const createSlideshow = function () {
       let me = this;
       // CLOSURE TO BE USED AS THE CLICK EVENT HANDLER
       return function () {
-        // 'THIS' IS THE CLICKED BUTTON
-        // 'ME' IS THE OBJECT LITERAL
         play = !play;
         if (!play) {
           stopSlideShow();
