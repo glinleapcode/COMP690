@@ -24,6 +24,7 @@ const createSlideshow = function () {
 
   const setPlayText = function (btn) {
     // btn.value = play ? "Resume" : "Pause";
+    // when it is playing, the button should say pause, when it is paused, the button should say resume
     btn.value = play ? "Pause" : "Resume";
   };
 
