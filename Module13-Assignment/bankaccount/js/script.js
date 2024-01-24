@@ -28,7 +28,7 @@ const display = document.getElementById("display");
 let account;
 nameBtn.addEventListener("click", () => {
   const name = prompt("Enter your name");
-  console.log(name);
+  // console.log(name);
   display.innerHTML = `Welcome to your bank account: Name: ${name}`;
   account = bankAccount(name);
 });
@@ -42,7 +42,7 @@ depositBtn.addEventListener("click", () => {
   const newBalance = account.deposit(amount);
   display.innerHTML = `Name: ${account.getOwnerName()} <br> New Balance: ${newBalance} <br>
    Recent Transaction: depositing ${amount} `;
-  console.log(amount, typeof amount);
+  // console.log(amount, typeof amount);
 });
 
 withdrawBtn.addEventListener("click", () => {
