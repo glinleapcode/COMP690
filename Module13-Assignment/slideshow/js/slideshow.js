@@ -41,7 +41,6 @@ const createSlideshow = function () {
         image.title = slide.title;
         img.cache.push(image);
       });
-
       return this;
     },
     startSlideShow: function () {
