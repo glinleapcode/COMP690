@@ -4,7 +4,8 @@ const bankAccount = function (ownerName) {
   return {
     withdraw: function (withdrawalAmount) {
       if (withdrawalAmount > balance) {
-        console.log("Insufficient funds");
+        // console.log("Insufficient funds");
+        // return null to indicate cannot complete transaction because of insufficient funds
         return null;
       }
       balance -= withdrawalAmount;
@@ -52,6 +53,7 @@ withdrawBtn.addEventListener("click", () => {
     return;
   }
   const newBalance = account.withdraw(amount);
+  // check if newBalance is null, if so, alert user of insufficient funds
   if (newBalance === null) {
     alert("Insufficient funds for withdrawal.");
     return;
