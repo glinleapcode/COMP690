@@ -85,6 +85,7 @@ const createSlideshow = function () {
           stopSlideShow();
           me.setSpeed(newSpeed);
           me.startSlideShow(nodes.image, nodes.caption);
+          play = true;
         } else {
           alert("Please enter a valid speed in milliseconds.");
         }
