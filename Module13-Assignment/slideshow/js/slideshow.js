@@ -42,8 +42,7 @@ const createSlideshow = function () {
         nodes.image = arguments[0];
         nodes.caption = arguments[1];
       }
-
-      // console.log(this.getSpeed());
+      // SET IMAGE AND CAPTION TO FIRST IMAGE
       timer = setInterval(displayNextImage, this.getSpeed());
       return this;
     },
