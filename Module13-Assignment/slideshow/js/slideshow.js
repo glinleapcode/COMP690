@@ -54,7 +54,7 @@ const createSlideshow = function () {
       return function () {
         // 'THIS' IS THE CLICKED BUTTON
         // 'ME' IS THE OBJECT LITERAL
-        if (play) {
+        if (!play) {
           stopSlideShow();
         } else {
           me.startSlideShow();
