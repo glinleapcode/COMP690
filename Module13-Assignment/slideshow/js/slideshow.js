@@ -23,8 +23,8 @@ const createSlideshow = function () {
   };
 
   const setPlayText = function (btn) {
-    // btn.value = play ? "Resume" : "Pause";
-    btn.value = play ? "Pause" : "Resume";
+    btn.value = play ? "Resume" : "Pause";
+    // btn.value = play ? "Pause" : "Resume";
   };
 
   // PUBLIC METHODS THAT HAVE ACCESS TO PRIVATE VARIABLES AND FUNCTIONS
@@ -54,7 +54,7 @@ const createSlideshow = function () {
       return function () {
         // 'THIS' IS THE CLICKED BUTTON
         // 'ME' IS THE OBJECT LITERAL
-        if (!play) {
+        if (play) {
           stopSlideShow();
         } else {
           me.startSlideShow();
