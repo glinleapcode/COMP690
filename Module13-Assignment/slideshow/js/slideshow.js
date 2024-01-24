@@ -41,8 +41,7 @@ const createSlideshow = function () {
         image.title = slides[i].title;
         img.cache.push(image);
       }
-      // this refer to the object that the createSlideshow() method returns
-      // return this allows method chaining of loadImages() and startSlideShow()
+
       return this;
     },
     startSlideShow: function () {
@@ -50,8 +49,8 @@ const createSlideshow = function () {
         nodes.image = arguments[0];
         nodes.caption = arguments[1];
       }
-      //   timer = setInterval(displayNextImage, 2000);
-      console.log(this.getSpeed());
+
+      // console.log(this.getSpeed());
       timer = setInterval(displayNextImage, this.getSpeed());
       return this;
     },
@@ -67,8 +66,7 @@ const createSlideshow = function () {
         } else {
           me.startSlideShow();
         }
-        // this refers to the clicked button
-        // set playButton text to 'Resume' or 'Pause'
+
         setPlayText(this);
         // TOGGLE PLAY 'FLAG'
         play = !play;
