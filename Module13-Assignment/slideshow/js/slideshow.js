@@ -83,17 +83,16 @@ const createSlideshow = function () {
 
     createSetSpeedHandler: function () {
       let me = this;
-      console.log(me);
+
       return function () {
         let newSpeed = parseInt(
           prompt("Please enter a new speed in milliseconds: ")
         );
         if (!isNaN(newSpeed) && newSpeed > 0) {
+          // need to stop the slideshow and restart it
           stopSlideShow();
           me.setSpeed(newSpeed);
           me.startSlideShow(nodes.image, nodes.caption);
-
-          //   console.log(newSpeed);
         } else {
           alert("Please enter a valid speed in milliseconds.");
         }
