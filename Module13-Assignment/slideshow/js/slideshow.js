@@ -62,7 +62,6 @@ const createSlideshow = function () {
         }
 
         setPlayText(this);
-        console.log(this);
       };
     },
 
@@ -76,21 +75,18 @@ const createSlideshow = function () {
 
     createSetSpeedHandler: function () {
       let me = this;
-
       return function () {
         let newSpeed = parseInt(
           prompt("Please enter a new speed in milliseconds: ")
         );
         if (!isNaN(newSpeed) && newSpeed > 0) {
-          // need to stop the slideshow and restart it
+          // need to stop the slideshow and restart it for the new speed to take effect
           stopSlideShow();
           me.setSpeed(newSpeed);
           me.startSlideShow(nodes.image, nodes.caption);
           play = true;
-
           setPlayText($("play_pause"));
           // $("play_pause").value = "Pause";
-          console.log(this);
         } else {
           alert("Please enter a valid speed in milliseconds.");
         }
