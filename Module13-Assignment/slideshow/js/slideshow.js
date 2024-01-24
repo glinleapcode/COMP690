@@ -15,21 +15,15 @@ const createSlideshow = function () {
   };
 
   const displayNextImage = function () {
-    let image = img.cache[img.counter];
+    const image = img.cache[img.counter];
     nodes.image.src = image.src;
     nodes.caption.innerHTML = image.title;
     img.counter++;
-    if (img.counter === img.cache.length) {
-      img.counter = 0;
-    }
+    img.counter = (img.counter + 1) % img.cache.length;
   };
 
   const setPlayText = function (btn) {
-    if (play) {
-      btn.value = "Resume";
-    } else {
-      btn.value = "Pause";
-    }
+    btn.value = play ? "Resume" : "Pause";
   };
 
   // PUBLIC METHODS THAT HAVE ACCESS TO PRIVATE VARIABLES AND FUNCTIONS
