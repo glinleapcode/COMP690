@@ -48,7 +48,6 @@ const createSlideshow = function () {
       return this;
     },
     createToggleHandler: function () {
-      // this refers to the slideshow object
       let me = this;
       // CLOSURE TO BE USED AS THE CLICK EVENT HANDLER
       return function () {
@@ -60,7 +59,6 @@ const createSlideshow = function () {
         } else {
           me.startSlideShow();
         }
-
         setPlayText(this);
       };
     },
