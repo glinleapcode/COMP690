@@ -87,9 +87,10 @@ const createSlideshow = function () {
           me.setSpeed(newSpeed);
           me.startSlideShow(nodes.image, nodes.caption);
           play = true;
-          // setPlayText($("play_pause"));
 
-          $("play_pause").value = "Pause";
+          setPlayText($("play_pause"));
+          // $("play_pause").value = "Pause";
+          console.log(this);
         } else {
           alert("Please enter a valid speed in milliseconds.");
         }
